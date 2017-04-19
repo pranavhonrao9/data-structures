@@ -52,8 +52,62 @@ class LinkedList(object):
         self.head =prev
         return
 
-    def  remove_list(self,position):
-        pass
+    def  remove_list_first_element(self):
+        n = self.head
+        if n is None:
+            return
+        else:
+
+            self.head=n.next
+
+        return self
+
+
+    def remove_list(self,key):
+        n= self.head
+        if n is None:
+            return
+
+        while n.next:
+            if (n.data==key):
+                break
+            prev=n
+            n=n.next
+        #print "previous",prev.next
+        #print "next", n.next
+        prev.next=n.next
+        #print "n",n
+        n = None
+
+
+    def RemoveNode(self, index):
+        prev = None
+        node = self.head
+        i = 0
+
+        while (node.next != None) and (i < index):
+            prev = node
+            node = node.next
+            i += 1
+
+        if prev == None:
+            node.next =self.head
+        else:
+            prev.next = node.next #this line
+
+
+
+    def nth_element(self,key):
+        n=self.head
+        position =0
+        while n.next:
+            if n.data == key:
+                return position
+            n =n.next
+            position+=1
+
+        return position
+
 
 
     def detect_loop(self):
@@ -69,6 +123,36 @@ class LinkedList(object):
 
 
 
+
+    def search_list_element(self,data):
+
+        n= self.head
+        position =0
+        while n.next:
+            if n.data == data:
+                return position
+            n = n.next
+            position+=1
+
+        return position
+
+    def delete_duplicate_element_sorted_list(self):
+        p1 = self.head
+        while (p1.next):
+            if (p1.data == p1.next.data):
+                p1.next =p1.next.next
+            else:
+                p1 = p1.next
+
+        return self.head
+
+
+
+
+
+
+    def sort_list(self):
+        pass
 
 
 
@@ -97,21 +181,37 @@ class LinkedList(object):
 
 k = LinkedList()
 
-k.append(20)
-k.append(4)
-k.append(15)
+k.append(10)
+
+k.append(30)
+
+
+k.append(40)
+
+k.append(105)
 
 
 
-k.printList()
+#k.printList()
 #print "size",k.list_size()
 
 #print "middle number is ",k.middle_number()
 
 
+#k.RemoveNode(2)
+#k.remove_list_last_element()
+#k.printList()
+#k.delete_duplicate_element_sorted_list()
+#k.delete_duplicate_element_sorted_list()
+#k.printList()
 
-k.head.next.next.next = k.head
-print k.detect_loop()
+k.remove_list(40)
+k.printList()
+
+
+#print k.nth_element(15)
+#k.head.next.next.next = k.head
+#print k.detect_loop()
 
 #print k.detect_loop()
 #k.reverse_list()
