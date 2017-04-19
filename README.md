@@ -10,6 +10,5 @@ I.Singly Linked List Operations:
 6.print list
 7.remove
 8.find nth element
-9.detect adjecent numbers
-10.remove duplicates
-11.sort the linkedlist
+9.remove duplicates
+10.sort the linkedlist
