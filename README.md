@@ -12,3 +12,6 @@ I.Singly Linked List Operations:
 8.find nth element
 9.remove duplicates
 10.sort the linkedlist
+
+
+II.Doubly Linked List
