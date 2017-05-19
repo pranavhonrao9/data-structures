@@ -16,15 +16,15 @@ def spiral(m,n,a):
             print a[i][n-1]
         n = n - 1
 
-        if (k<m):
-            for i in range(n-1,l-1,-1):
+        #i
+        for i in range(n-1,l-1,-1):
               #  print 'm-1',m-1,'i',i
-                print a[m-1][i]
+            print a[m-1][i]
         m= m-1
 
-        if (l<n):
-            for i in range(m-1,k-1,-1):
-                print a[i][l]
+
+        for i in range(m-1,k-1,-1):
+            print a[i][l]
         l= l+1
 
 temp = spiral(4,4,a)
