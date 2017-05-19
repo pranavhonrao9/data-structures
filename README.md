@@ -17,3 +17,5 @@ I.Singly Linked List Operations:
 II.Doubly Linked List
 
 III.Implement hashmap by using linkedlist
+
+IV.Spiral
